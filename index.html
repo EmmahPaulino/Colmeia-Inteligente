@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento da Colmeia Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</body id="top">
+    <div class="fundo-mel-svg"></div> 
+
+    <header class="capa">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#top">Início</a></li> <li><a href="#secao-graficos">Monitoramento</a></li>
+                <li><a href="#secao-audio">Áudio</a></li>
+            </ul>
+        </nav>
+        <div class="conteudo-principal-capa">
+            <h1>Colmeia Inteligente 🐝</h1>
+            <a href="#secao-graficos" class="link-botao">
+                <button class="botao-monitoramento">Ver Monitoramento</button>
+            </a>
+        </div>
+    </header>
+
+    <section class="descricao">
+        <p>Acompanhe em tempo real a saúde e a atividade da nossa colmeia com nosso sistema de monitoramento inteligente.</p>
+        <p>Agradecemos por nos assitir e lembre-se: Nosso futuro depende das abelhas!!!</p>
+    </section>
+    <section id="secao-graficos" class="monitoramento-dados">
+        <h2>Dados Atuais da Colmeia</h2>
+        <p id="temperatura-dado">Dados da Temperatura: -- °C</p>
+        <p id="umidade-dado">Dados da Umidade: -- %</p>
+        <p id="abelhas-dado">Entrada e Saída das abelhinhas: --</p>
+
+        <div class="grafico-container">
+            <canvas id="graficoTemperatura"></canvas>
+        </div>
+    </section>
+
+    <section id="secao-audio" class="secao-audio">
+        <h2>Ouça a Colmeia</h2>
+        <p>Conecte-se com o som da natureza e ouça o murmúrio da colmeia em tempo real (em breve!).</p>
+        <div class="audio-container">
+            <audio controls>
+                <source src="a-bumble-bee-flies-into-a-nest-345707.mp3" type="audio/mpeg"> 
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </section>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="script.js"></script>
+</body id="top">
+</html>
