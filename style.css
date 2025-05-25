@@ -29,7 +29,7 @@ body {
     background-image: url('mel-3D-escorrendo.svg..svg'); 
     background-size: 100% auto; /* Faz o SVG cobrir a área, cortando se necessário para não distorcer */
     background-repeat: no-repeat; /* Garante que a imagem não se repita */
-    background-position: center 50%; /* Centraliza a imagem e alinha pela parte de baixo */
+    background-position: center top; /* Centraliza a imagem e alinha pela parte de baixo */
     background-color: transparent; /* Certifica-se de que não há cor de fundo abaixo do SVG */
     animation: descermel-3D-escorrendosvgsvg 2.8s ease-out forwards;
 }
