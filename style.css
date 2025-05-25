@@ -3,71 +3,6 @@
 html {
     scroll-behavior: smooth !important;
 }
-.main-nav {
-    width: 100%;
-    background-color: rgba(255, 215, 0, 0.9); /* Um amarelo mais escuro com transparência */
-    padding: 15px 0;
-    position: fixed; /* Fixa o menu no topo da tela */
-    top: 0; /* Alinha ao topo */
-    left: 0; /* Alinha à esquerda */
-    z-index: 1000; /* Garante que o menu fique acima de todo o resto do conteúdo */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
-}
-
-.main-nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Faz os itens do menu ficarem um ao lado do outro */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center;
-}
-
-.main-nav li {
-    margin: 0 25px; /* Espaçamento entre os itens do menu */
-}
-
-.main-nav a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #333; /* Cor do texto do link */
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.main-nav a:hover {
-    color: #000; /* Cor do texto ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de leve levantamento */
-}
-
-/* Ajuste no padding da capa para que o conteúdo não fique escondido atrás do menu */
-.capa {
-    padding-top: 100px; /* Adicione um padding no topo da capa para compensar o menu fixo */
-    /* ... o resto do seu CSS para .capa ... */
-}
-
-/* Você pode precisar ajustar o padding-top de outras seções também, se elas ficarem escondidas */
-.descricao, .monitoramento-dados, .secao-audio {
-    margin-top: 50px; /* Você já tem isso, apenas um lembrete */
-    /* ... e possivelmente adicionar um padding-top se necessário, mas o margin-top já deve ajudar */
-}
-
-/* Media Queries para responsividade do menu (opcional, para dispositivos móveis) */
-@media (max-width: 768px) {
-    .main-nav ul {
-        flex-direction: column; /* Em telas menores, os itens ficam um embaixo do outro */
-    }
-    .main-nav li {
-        margin: 10px 0; /* Ajuste o espaçamento vertical */
-    }
-    .main-nav {
-        padding: 10px 0; /* Reduza o padding do menu */
-    }
-    .capa {
-        padding-top: 150px; /* Aumente o padding da capa se o menu ficar maior */
-    }
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -92,7 +27,7 @@ body {
     z-index: 1; /* Fica atrás do conteúdo principal */
     
     background-image: url('mel-3D-escorrendo.svg..svg'); 
-    background-size: cover; /* Faz o SVG cobrir a área, cortando se necessário para não distorcer */
+    background-size: 100% auto; /* Faz o SVG cobrir a área, cortando se necessário para não distorcer */
     background-repeat: no-repeat; /* Garante que a imagem não se repita */
     background-position: center 50%; /* Centraliza a imagem e alinha pela parte de baixo */
     background-color: transparent; /* Certifica-se de que não há cor de fundo abaixo do SVG */
