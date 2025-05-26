@@ -18,6 +18,7 @@ body {
     flex-direction: column;
 }
 
+/* Fundo de mel padrão (PARA DESKTOP E TELAS MAIORES) */
 .fundo-mel-svg {
     position: absolute;
     top: 0;
@@ -26,15 +27,19 @@ body {
     height: 100vh; /* Ocupa 100% da altura da tela */
     z-index: 1; /* Fica atrás do conteúdo principal */
     
-    background-image: url('mel-3D-escorrendo.svg'); /* Caminho confirmado pelo usuário */
-    background-size: 100% auto; /* A largura cobre 100%, e a altura se ajusta proporcionalmente */
-    background-repeat: no-repeat; /* Garante que a imagem não se repita */
-    background-position: center top; /* CORRIGIDO: Centraliza a imagem e alinha ao topo */
+    /* IMAGEM PARA DESKTOP */
+    background-image: url('mel-3D-escorrendo.svg..svg'); /* Nome exato do SVG para desktop */
+    background-size: cover; /* Ajusta para cobrir toda a área, pode cortar bordas */
+    background-repeat: no-repeat;
+    background-position: center top; 
     background-color: transparent; 
-    animation: descermel-3D-escorrendosvg 2.8s ease-out forwards;
+    
+    /* ANIMAÇÃO - Aplicada aqui e reativada nas media queries se necessário */
+    animation: descermel-3D-escorrendosvgsvg 2.8s ease-out forwards;
 }
 
-@keyframes descermel-3D-escorrendosvg {
+/* Keyframes da animação (genérica para .fundo-mel-svg) */
+@keyframes descermel-3D-escorrendosvgsvg {
     0% { transform: translateY(-100vh); }
     100% { transform: translateY(0); }
 }
@@ -157,7 +162,7 @@ h1 {
 .secao-audio {
     background-color: #ffdd00; /* Cor de mel mais escura para o fundo */
     padding: 40px 20px;
-    margin-top: 50px; /* Espaço entre a seção anterior e esta */
+    margin-top: 50px; 
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -170,7 +175,7 @@ h1 {
 }
 
 .secao-audio h2 {
-    color: #000; /* Título escuro para contrastar */
+    color: #000; 
     margin-bottom: 20px;
     font-size: 2em;
     font-family: Arial, sans-serif;
@@ -187,7 +192,7 @@ h1 {
 
 .audio-container {
     width: 100%;
-    max-width: 400px; /* Largura máxima para o player de áudio */
+    max-width: 400px; 
     margin: 20px auto;
     background-color: #fff;
     border-radius: 8px;
@@ -196,12 +201,20 @@ h1 {
 }
 
 .audio-container audio {
-    width: 100%; /* Faz o player de áudio preencher o container */
+    width: 100%; 
 }
 
 /* --- MEDIA QUERIES --- */
-/* Ajustes de responsividade para telas menores que 768px (tablets) */
+/* Ajustes de responsividade para telas menores que 768px (tablets e celulares grandes) */
 @media (max-width: 768px) {
+    /* IMAGEM PARA CELULAR/TABLET */
+    .fundo-mel-svg {
+        background-image: url('mel-3D-escorrendo.svg'); /* Nome exato do SVG para celular */
+        background-size: cover; 
+        background-position: center top;
+        /* A animação já está ativa por padrão, não precisa redefini-la aqui a menos que queira um comportamento diferente */
+    }
+
     h1 {
         font-size: 3.5em;
     }
@@ -219,17 +232,15 @@ h1 {
     .monitoramento-dados {
         margin-top: 30px;
         padding: 20px 15px;
-        /* GARANTE QUE A SEÇÃO OCUPA QUASE TODA A LARGURA DA TELA */
-        max-width: calc(100% - 30px); /* 100% da tela menos 15px de padding de cada lado */
+        max-width: calc(100% - 30px); 
     }
     .grafico-container {
         height: 300px;
-        max-width: 100%; /* GARANTE QUE O GRÁFICO SE ADAPTE À LARGURA DISPONÍVEL */
+        max-width: 100%; 
     }
     .secao-audio {
         margin-top: 30px;
         padding: 20px 15px;
-        /* GARANTE QUE A SEÇÃO OCUPA QUASE TODA A LARGURA DA TELA */
         max-width: calc(100% - 30px);
     }
     .secao-audio h2 {
@@ -240,8 +251,16 @@ h1 {
     }
 }
 
-/* Ajustes de responsividade para telas menores que 480px (celulares) */
+/* Ajustes de responsividade para telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
+    /* IMAGEM PARA CELULAR (pode ser a mesma da media query acima ou uma ainda mais otimizada) */
+    .fundo-mel-svg {
+        background-image: url('mel-3D-escorrendo.svg'); /* Nome exato do SVG para celular */
+        background-size: cover;
+        background-position: center top;
+        /* A animação já está ativa por padrão */
+    }
+
     h1 {
         font-size: 2.5em;
     }
@@ -262,17 +281,15 @@ h1 {
     .monitoramento-dados {
         margin-top: 20px;
         padding: 15px 10px;
-        /* GARANTE QUE A SEÇÃO OCUPA QUASE TODA A LARGURA DA TELA */
-        max-width: calc(100% - 20px); /* 100% da tela menos 10px de padding de cada lado */
+        max-width: calc(100% - 20px); 
     }
     .grafico-container {
         height: 250px;
-        max-width: 100%; /* GARANTE QUE O GRÁFICO SE ADAPTE À LARGURA DISPONÍVEL */
+        max-width: 100%; 
     }
     .secao-audio {
         margin-top: 20px;
         padding: 15px 10px;
-        /* GARANTE QUE A SEÇÃO OCUPA QUASE TODA A LARGURA DA TELA */
         max-width: calc(100% - 20px);
     }
     .secao-audio h2 {
