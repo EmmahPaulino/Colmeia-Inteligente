@@ -26,15 +26,15 @@ body {
     height: 100vh; /* Ocupa 100% da altura da tela */
     z-index: 1; /* Fica atrás do conteúdo principal */
     
-    background-image: url('mel-3D-escorrendo.svg..svg'); /* Caminho confirmado pelo usuário */
+    background-image: url('mel-3D-escorrendo.svg'); /* Caminho confirmado pelo usuário */
     background-size: 100% auto; /* A largura cobre 100%, e a altura se ajusta proporcionalmente */
     background-repeat: no-repeat; /* Garante que a imagem não se repita */
     background-position: center top; /* CORRIGIDO: Centraliza a imagem e alinha ao topo */
     background-color: transparent; 
-    animation: descermel-3D-escorrendosvgsvg 2.8s ease-out forwards;
+    animation: descermel-3D-escorrendosvg 2.8s ease-out forwards;
 }
 
-@keyframes descermel-3D-escorrendosvgsvg {
+@keyframes descermel-3D-escorrendosvg {
     0% { transform: translateY(-100vh); }
     100% { transform: translateY(0); }
 }
