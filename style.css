@@ -24,12 +24,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Ocupa 100% da altura da tela */
+    height: 70%vh; /* Ocupa 100% da altura da tela */
     z-index: 1; /* Fica atrás do conteúdo principal */
     
     /* IMAGEM PARA DESKTOP */
     background-image: url('mel-3D-escorrendo.svg..svg'); /* Nome exato do SVG para desktop */
-    background-size: 50%; /* Ajusta para cobrir toda a área, pode cortar bordas */
+    background-size: cover; /* Ajusta para cobrir toda a área, pode cortar bordas */
     background-repeat: no-repeat;
     background-position: center top; 
     background-color: transparent; 
