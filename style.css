@@ -31,7 +31,7 @@ body {
     background-image: url('mel-3D-escorrendo.svg..svg'); /* Nome exato do SVG para desktop */
     background-size: cover; /* Ajusta para cobrir toda a área, pode cortar bordas */
     background-repeat: no-repeat;
-    background-position: center top; 
+    background-position: center bottom; 
     background-color: transparent; 
     
     /* ANIMAÇÃO - Aplicada aqui e reativada nas media queries se necessário */
