@@ -1,7 +1,7 @@
 // Variáveis para guardar os dados do gráfico
 let historicoTemperaturas = [];
 let labelsTempo = [];
-const MAX_DADOS = 10; // Quantos pontos de dados queremos mostrar no gráfico
+const MAX_DADOS = 10; // Pontos de dados do gráfico
 
 // Configuração inicial do gráfico
 const ctx = document.getElementById('graficoTemperatura').getContext('2d');
@@ -20,7 +20,7 @@ const meuGraficoTemperatura = new Chart(ctx, {
     },
     options: {
         responsive: true, // Gráfico se adapta ao tamanho da tela
-        maintainAspectRatio: false, // Permite controlar a proporção (usamos o div do HTML para isso)
+        maintainAspectRatio: false, // Controle de proporção
         scales: {
             y: {
                 beginAtZero: false, // O eixo Y não começa do zero
@@ -41,7 +41,7 @@ const meuGraficoTemperatura = new Chart(ctx, {
 
 // Função para atualizar os dados na página e no gráfico
 function atualizarDadosColmeia() {
-    // Simulando dados que viriam dos seus sensores
+    // Simulando dados que viriam dos sensores
     const temperatura = parseFloat((Math.random() * (36 - 32) + 32).toFixed(1)); // Temperatura entre 32.0 e 36.0
     const umidade = Math.floor(Math.random() * (75 - 60) + 60);     // Umidade entre 60 e 75
     const abelhas = Math.floor(Math.random() * (200 - 100) + 100);  // Contagem entre 100 e 200
@@ -58,7 +58,7 @@ function atualizarDadosColmeia() {
     const pAbelhas = document.getElementById('abelhas-dado');
     pAbelhas.textContent = `Entrada e Saída das abelhinhas: ${abelhas}`;
 
-    // --- Atualização do Gráfico ---
+  
     // Adiciona a nova temperatura ao histórico
     historicoTemperaturas.push(temperatura);
 
@@ -66,10 +66,10 @@ function atualizarDadosColmeia() {
     const agora = new Date();
     labelsTempo.push(agora.toLocaleTimeString()); // Pega a hora atual
 
-    // Se tivermos mais dados do que o máximo desejado, removemos os mais antigos
+    // Se tiver mais dados do que o máximo desejado, remove os mais antigos
     if (historicoTemperaturas.length > MAX_DADOS) {
-        historicoTemperaturas.shift(); // Remove o primeiro elemento (o mais antigo)
-        labelsTempo.shift(); // Remove o label de tempo mais antigo
+        historicoTemperaturas.shift(); // Remove o primeiro elemento
+        labelsTempo.shift();
     }
 
     // Avisa ao gráfico que os dados mudaram para ele se redesenhar
@@ -79,4 +79,5 @@ function atualizarDadosColmeia() {
 }
 
 // Chama a função a cada 5000 milissegundos (ou seja, a cada 5 segundos)
+
 setInterval(atualizarDadosColmeia, 5000);
