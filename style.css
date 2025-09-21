@@ -13,7 +13,7 @@ body {
     box-sizing: border-box;
     position: relative;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+    overflow-x: hidden; /* Evita rolagem horizontal */
     display: flex;
     flex-direction: column;
 }
@@ -28,13 +28,13 @@ body {
     z-index: 1; /* Fica atrás do conteúdo principal */
     
     /* IMAGEM PARA DESKTOP */
-    background-image: url('mel-3D-escorrendo.svg..svg'); /* Nome exato do SVG para desktop */
-    background-size: cover; /* Ajusta para cobrir toda a área, pode cortar bordas */
+    background-image: url('mel-3D-escorrendo.svg..svg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
     background-color: transparent; 
     
-    /* ANIMAÇÃO - Aplicada aqui e reativada nas media queries se necessário */
+    /* ANIMAÇÃO */
     animation: descermel-3D-escorrendosvgsvg 2.8s ease-out forwards;
 }
 
@@ -44,7 +44,7 @@ body {
     100% { transform: translateY(0); }
 }
  
-/* CAPA (onde fica o título e o botão) */
+/* CAPA */
 .capa {
     position: relative;
     z-index: 10; /* Fica acima do SVG de fundo */
@@ -58,7 +58,7 @@ body {
     flex-grow: 1;
 }
 
-/* Conteúdo principal da capa (título e botão) */
+/* Conteúdo da capa (título e botão) */
 .conteudo-principal-capa {
     text-align: center;
     max-width: 800px;
@@ -160,13 +160,13 @@ h1 {
 
 /* SEÇÃO DE ÁUDIO */
 .secao-audio {
-    background-color: #ffdd00; /* Cor de mel mais escura para o fundo */
+    background-color: #ffdd00;
     padding: 40px 20px;
     margin-top: 50px; 
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 900px; /* Largura máxima, igual às outras seções no desktop */
+    max-width: 900px; /* Largura máxima */
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -209,10 +209,10 @@ h1 {
 @media (max-width: 768px) {
     /* IMAGEM PARA CELULAR/TABLET */
     .fundo-mel-svg {
-        background-image: url('mel-3D-escorrendo.svg'); /* Nome exato do SVG para celular */
+        background-image: url('mel-3D-escorrendo.svg'); /* SVG para celular */
         background-size: cover; 
         background-position: center top;
-        /* A animação já está ativa por padrão, não precisa redefini-la aqui a menos que queira um comportamento diferente */
+    
     }
 
     h1 {
@@ -253,12 +253,12 @@ h1 {
 
 /* Ajustes de responsividade para telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
-    /* IMAGEM PARA CELULAR (pode ser a mesma da media query acima ou uma ainda mais otimizada) */
+    /* IMAGEM PARA CELULAR */
     .fundo-mel-svg {
-        background-image: url('mel-3D-escorrendo.svg'); /* Nome exato do SVG para celular */
+        background-image: url('mel-3D-escorrendo.svg'); /* SVG para celular */
         background-size: cover;
         background-position: center top;
-        /* A animação já está ativa por padrão */
+    
     }
 
     h1 {
@@ -296,3 +296,4 @@ h1 {
         font-size: 1.5em;
     }
 }
+
